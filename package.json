@@ -5,7 +5,7 @@
   "author": "Mahmoud Nasredeen <mahmoudnasredeen099@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mahmoudnasredeen/v4"
+    "url": "https://github.com/Mahmoud9-dev/Portfolio-v1.git"
   },
   "keywords": [
     "gatsby"
@@ -75,7 +75,6 @@
     "gatsby-remark-code-titles": "^1.1.0",
     "husky": "^6.0.0",
     "lint-staged": "^10.1.2",
-    "prettier": "^2.2.1",
-    "sharp": "^0.34.2"
+    "prettier": "^2.2.1"
   }
 }
