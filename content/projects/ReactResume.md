@@ -1,8 +1,8 @@
 ---
 date: '2016-08-01'
 title: 'React Profile'
-github: 'https://github.com/bchiang7/react-profile'
-external: 'https://bchiang7.github.io/react-profile/'
+github: 'https://github.com/mahmoudnasredeen/react-profile'
+external: 'https://mahmoudnasredeen.github.io/react-profile/'
 tech:
   - React
   - CSS
