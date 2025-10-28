@@ -65,7 +65,7 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I am a software engineer who builds <strong style={{ color: 'var(--green)' }}>+20 project</strong>
+        I am a software engineer who builds <strong style={{ color: 'var(--green)' }}>+20 project </strong>
          and designs high-performance digital experiences. By
         focusing on accessible, human-centered engineering, I deliver products that consistently
         achieve <strong style={{ color: 'var(--green)' }}>90+ Lighthouse & SEO scores</strong>,
