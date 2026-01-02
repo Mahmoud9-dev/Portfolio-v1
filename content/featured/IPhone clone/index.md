@@ -1,5 +1,5 @@
 ---
-date: '2'
+date: '4'
 title: 'IPhone clone'
 cover: './demo.png'
 github: 'https://github.com/Mahmoud9-dev/Iphone.git'
