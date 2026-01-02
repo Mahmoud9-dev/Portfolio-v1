@@ -4,6 +4,20 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
+// Polyfill for File global (required by undici in Node < 20)
+/* eslint-disable no-undef */
+if (typeof global.File === 'undefined') {
+  const { Blob } = require('buffer');
+  global.File = class File extends Blob {
+    constructor(chunks, name, opts = {}) {
+      super(chunks, opts);
+      this.name = name;
+      this.lastModified = opts.lastModified || Date.now();
+    }
+  };
+}
+/* eslint-enable no-undef */
+
 // Increase the default max listeners to prevent memory leak warnings
 const events = require('events');
 events.EventEmitter.defaultMaxListeners = 20;
