@@ -29,7 +29,7 @@ module.exports = {
         icon: 'src/images/logo.png',
       },
     },
-    `gatsby-plugin-offline`,
+    // `gatsby-plugin-offline`, // Disabled - causes "File is not defined" error on Netlify
     {
       resolve: `gatsby-source-filesystem`,
       options: {
