@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gatsby develop)",
+      "Bash(gatsby build)",
+      "Bash(gatsby clean)",
+      "Bash(gatsby serve)",
+      "Bash(npm run build)",
+      "Bash(npm run develop)",
+      "Bash(npm run clean)",
+      "Bash(npm run format)",
+      "Bash(npm run lint-staged)",
+      "Bash(npx eslint*)",
+      "Bash(npx prettier*)",
+      "Bash(git status)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git add*)",
+      "Bash(git commit*)",
+      "Bash(git push*)",
+      "Bash(git branch*)",
+      "Bash(git checkout*)",
+      "Bash(git fetch*)",
+      "Bash(git pull*)",
+      "Bash(ls*)",
+      "Bash(node --version)",
+      "Bash(cat .nvmrc)"
+    ],
+    "deny": [
+      "Bash(rm -rf*)",
+      "Bash(npm install*)",
+      "Bash(git push --force*)",
+      "Bash(git reset --hard*)",
+      "Bash(vercel --prod*)"
+    ]
+  }
+}
