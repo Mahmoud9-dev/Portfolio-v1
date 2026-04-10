@@ -1,5 +1,6 @@
 {
-  "framework": "gatsby",
-  "buildCommand": "gatsby build",
-  "outputDirectory": "public"
+  "framework": "vite",
+  "buildCommand": "vite build",
+  "outputDirectory": "dist",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
