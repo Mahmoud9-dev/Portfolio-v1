@@ -1,0 +1,41 @@
+diff --git a/node_modules/gatsby/dist/utils/babel-loader-helpers.js b/node_modules/gatsby/dist/utils/babel-loader-helpers.js
+index abf8f87..8ce7f3c 100644
+--- a/node_modules/gatsby/dist/utils/babel-loader-helpers.js
++++ b/node_modules/gatsby/dist/utils/babel-loader-helpers.js
+@@ -71,7 +71,11 @@ const prepareOptions = (babel, options = {}, resolve = require.resolve) => {
+     }));
+   }
+ 
+-  if (stage === `develop`) {
++  // react-refresh/babel disabled to match plugins.fastRefresh() being
++  // disabled in webpack-utils.js (see comment there): without the webpack
++  // plugin to provide the $RefreshReg$/$RefreshSig$ runtime globals, files
++  // transformed by this babel plugin throw "$RefreshSig$ is not defined".
++  if (false && stage === `develop`) {
+     requiredPlugins.push(babel.createConfigItem([resolve(`react-refresh/babel`)], {
+       type: `plugin`
+     }));
+diff --git a/node_modules/gatsby/dist/utils/webpack-utils.js b/node_modules/gatsby/dist/utils/webpack-utils.js
+index 70ead30..54faced 100644
+--- a/node_modules/gatsby/dist/utils/webpack-utils.js
++++ b/node_modules/gatsby/dist/utils/webpack-utils.js
+@@ -506,6 +506,19 @@ const createWebpackUtils = (stage, program) => {
+   plugins.fastRefresh = ({
+     modulesThatUseGatsby
+   }) => {
++    // Disabled: the bundled @pmmmwh/react-refresh-webpack-plugin (0.4.3, from
++    // gatsby's 2021-era dependency tree) generates a default-export name-patch
++    // ("Reflect.getOwnPropertyDescriptor(__WEBPACK_DEFAULT_EXPORT__, ...)")
++    // that assumes an older webpack codegen shape. Against the webpack version
++    // that actually resolves in this project, the referenced variable is never
++    // declared, throwing "__WEBPACK_DEFAULT_EXPORT__ is not defined" at runtime
++    // and crashing hydration before React ever mounts. Returning undefined
++    // here is handled gracefully by gatsby's own webpack.config.js (the
++    // plugin list is filtered with .filter(Boolean) and later guarded with
++    // `if (fastRefreshPlugin)`), so this just falls back to plain
++    // webpack-hot-middleware for dev reloads instead of React Fast Refresh.
++    return undefined;
++    /* eslint-disable no-unreachable */
+     const regExpToHack = /node_modules/;
+ 
+     regExpToHack.test = modulePath => {
