@@ -7,12 +7,12 @@ index abf8f87..8ce7f3c 100644
    }
  
 -  if (stage === `develop`) {
-+  // react-refresh/babel disabled to match plugins.fastRefresh() being
-+  // disabled in webpack-utils.js (see comment there): without the webpack
-+  // plugin to provide the $RefreshReg$/$RefreshSig$ runtime globals, files
-+  // transformed by this babel plugin throw "$RefreshSig$ is not defined".
-+  if (false && stage === `develop`) {
-     requiredPlugins.push(babel.createConfigItem([resolve(`react-refresh/babel`)], {
+  // react-refresh/babel disabled to match plugins.fastRefresh() being
+  // disabled in webpack-utils.js (see comment there): without the webpack
+  // plugin to provide the $RefreshReg$/$RefreshSig$ runtime globals, files
+  // transformed by this babel plugin throw "$RefreshSig$ is not defined".
+  const ENABLE_FAST_REFRESH = false;
+  if (ENABLE_FAST_REFRESH && stage === `develop`) {
        type: `plugin`
      }));
 diff --git a/node_modules/gatsby/dist/utils/webpack-utils.js b/node_modules/gatsby/dist/utils/webpack-utils.js
