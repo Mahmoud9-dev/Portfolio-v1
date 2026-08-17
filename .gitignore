@@ -15,3 +15,8 @@ dist
 
 # Logs
 yarn-error.log
+
+# Local test/verification artifacts
+/.playwright-mcp/
+/portfolio-test.png
+/redesign-*.png

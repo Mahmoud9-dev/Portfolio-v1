@@ -19,7 +19,7 @@ const StyledHeroSection = styled.section`
 
   h1 {
     margin: 0 0 30px 4px;
-    color: var(--green);
+    color: var(--accent);
     font-family: var(--font-mono);
     font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
     font-weight: 400;
@@ -31,7 +31,7 @@ const StyledHeroSection = styled.section`
 
   h3 {
     margin-top: 5px;
-    color: var(--slate);
+    color: var(--text-secondary);
     line-height: 0.9;
   }
 
@@ -66,10 +66,10 @@ const Hero = () => {
     <>
       <p>
         I am a software engineer who builds{' '}
-        <strong style={{ color: 'var(--green)' }}>+20 projects</strong> and designs high-performance
-        digital experiences. By focusing on accessible, human-centered engineering, I deliver
-        products that consistently achieve{' '}
-        <strong style={{ color: 'var(--green)' }}>90+ Lighthouse & SEO scores</strong>, ensuring a
+        <strong style={{ color: 'var(--accent)' }}>+20 projects</strong> and designs
+        high-performance digital experiences. By focusing on accessible, human-centered engineering,
+        I deliver products that consistently achieve{' '}
+        <strong style={{ color: 'var(--accent)' }}>90+ Lighthouse & SEO scores</strong>, ensuring a
         seamless and technically robust experience for every user.
       </p>
     </>
