@@ -17,7 +17,6 @@ const button = css`
 
   &:hover,
   &:focus-visible {
-    outline: none;
     background-color: var(--accent-hover);
     transform: scale(1.04);
     box-shadow: none;
@@ -108,7 +107,6 @@ const mixins = {
 
     &:hover,
     &:focus-visible {
-      outline: none;
       background-color: var(--accent-hover);
       transform: scale(1.04);
       box-shadow: none;
@@ -136,7 +134,6 @@ const mixins = {
 
     &:hover,
     &:focus-visible {
-      outline: none;
       background-color: var(--accent-hover);
       transform: scale(1.04);
       box-shadow: none;
