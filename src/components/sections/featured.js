@@ -117,14 +117,14 @@ const StyledProject = styled.li`
 
   .project-overline {
     margin: 10px 0;
-    color: var(--green);
+    color: var(--accent);
     font-family: var(--font-mono);
     font-size: var(--fz-xs);
     font-weight: 400;
   }
 
   .project-title {
-    color: var(--lightest-slate);
+    color: var(--text-primary);
     font-size: clamp(24px, 5vw, 28px);
 
     @media (min-width: 768px) {
@@ -132,7 +132,7 @@ const StyledProject = styled.li`
     }
 
     @media (max-width: 768px) {
-      color: var(--white);
+      color: var(--text-primary);
 
       a {
         position: static;
@@ -156,9 +156,10 @@ const StyledProject = styled.li`
     position: relative;
     z-index: 2;
     padding: 25px;
-    border-radius: var(--border-radius);
-    background-color: var(--light-navy);
-    color: var(--light-slate);
+    border-radius: var(--border-radius-card);
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
     font-size: var(--fz-lg);
 
     @media (max-width: 768px) {
@@ -176,7 +177,7 @@ const StyledProject = styled.li`
     }
 
     strong {
-      color: var(--white);
+      color: var(--text-primary);
       font-weight: normal;
     }
   }
@@ -192,7 +193,7 @@ const StyledProject = styled.li`
 
     li {
       margin: 0 20px 5px 0;
-      color: var(--light-slate);
+      color: var(--text-secondary);
       font-family: var(--font-mono);
       font-size: var(--fz-xs);
       white-space: nowrap;
@@ -203,7 +204,7 @@ const StyledProject = styled.li`
 
       li {
         margin: 0 10px 5px 0;
-        color: var(--lightest-slate);
+        color: var(--text-primary);
       }
     }
   }
@@ -214,7 +215,7 @@ const StyledProject = styled.li`
     position: relative;
     margin-top: 10px;
     margin-left: -10px;
-    color: var(--lightest-slate);
+    color: var(--text-primary);
 
     a {
       ${({ theme }) => theme.mixins.flexCenter};
@@ -256,8 +257,8 @@ const StyledProject = styled.li`
     a {
       width: 100%;
       height: 100%;
-      background-color: var(--green);
-      border-radius: var(--border-radius);
+      background-color: var(--accent-tint);
+      border-radius: var(--border-radius-card);
       vertical-align: middle;
 
       &:hover,
@@ -283,13 +284,13 @@ const StyledProject = styled.li`
         bottom: 0;
         z-index: 3;
         transition: var(--transition);
-        background-color: var(--navy);
+        background-color: var(--accent-tint);
         mix-blend-mode: screen;
       }
     }
 
     .img {
-      border-radius: var(--border-radius);
+      border-radius: var(--border-radius-card);
       mix-blend-mode: multiply;
       filter: grayscale(100%) contrast(1) brightness(90%);
 
