@@ -1,4 +1,4 @@
-export const email = 'mahmoudnasredeen099@gmail.com';
+export const email = 'mahmoud.nasredeen.work@gmail.com';
 
 export const socialMedia = [
   {
@@ -33,12 +33,6 @@ export const navLinks = [
     url: '/#contact',
   },
 ];
-
-export const colors = {
-  green: '#64ffda',
-  navy: '#0a192f',
-  darkNavy: '#020c1b',
-};
 
 export const srConfig = (delay = 200, viewFactor = 0.25) => ({
   origin: 'bottom',
