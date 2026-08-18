@@ -65,12 +65,10 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I am a software engineer who builds{' '}
-        <strong style={{ color: 'var(--accent)' }}>+20 projects</strong> and designs
-        high-performance digital experiences. By focusing on accessible, human-centered engineering,
-        I deliver products that consistently achieve{' '}
-        <strong style={{ color: 'var(--accent)' }}>90+ Lighthouse & SEO scores</strong>, ensuring a
-        seamless and technically robust experience for every user.
+        I am a software engineer who builds and designs high-performance digital experiences. By
+        focusing on accessible, human-centered engineering, I deliver products that consistently
+        achieve <strong style={{ color: 'var(--accent)' }}>90+ Lighthouse & SEO scores</strong>,
+        ensuring a seamless and technically robust experience for every user.
       </p>
     </>
   );
